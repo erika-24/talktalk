@@ -8,7 +8,6 @@
     # Assess content-recall answer
 #############################
 import json
-import time
 import io
 import sys
 import os
@@ -47,7 +46,7 @@ seasonsfilename = "../sample_audio/vocab_fall_sample.wav"
 # Pronunciation
 
 # Part 1: Question generation
-# @input: transcript, skill level
+# @input: transcript, skill
 # @output: Sentence to say
 def get_pronunciation_question(transcript, skill_level):
     question_request = f"""
