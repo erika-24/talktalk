@@ -8,7 +8,8 @@ load_dotenv(dotenv_path)
 
 
 def transcribe(path_to_vid):
-  client = genai.Client(api_key=os.getenv('GEMINI_API_KEY'))
+  print("test")
+  client = genai.Client(api_key='AIzaSyAHDVcQLerSyEnCv8Dv3iCa6eKnXbo5gSA')
 
   myfile = client.files.upload(file=path_to_vid)
   prompt = 'Generate a transcript of the speech.'
@@ -24,4 +25,4 @@ def transcribe(path_to_vid):
   print(response.text)
 
 # """Sample way of calling the function"""
-# transcribe("test.mp3")
+transcribe("test.mp3")
